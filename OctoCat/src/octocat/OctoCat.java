@@ -1,4 +1,4 @@
-/*Made by Andrea Mate
+/*Made by Andrea Mate, Tamás Nagy
 * For practice.
 This is the way! */
 
