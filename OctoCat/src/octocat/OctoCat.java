@@ -1,4 +1,4 @@
-/*Made by Andrea Mate
+/*Made by Andrea Mate, Katalin Andorfer
 * For practice.
 This is the way! */
 
@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author $Mate Andrea
+ * @author $Mate Andrea, Andorfer Katalin
  */
 public class OctoCat extends Application {
 
