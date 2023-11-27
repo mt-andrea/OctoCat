@@ -42,6 +42,7 @@
                         <Label text="Idegen szó:" GridPane.rowIndex="6" />
                         <Label text="Magyar:" GridPane.rowIndex="7" />
                         <TextField fx:id="txtLecke" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtIdegenNyelv" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                      </children>
                   </GridPane>
                </children></AnchorPane>
