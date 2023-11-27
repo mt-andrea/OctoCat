@@ -15,3 +15,4 @@ Az Eszterházy Károly Katolikus Egyetem Bölcsészettudományi és Művészeti 
 ## 3. A fejlesztés menete
 - 3.1 Az ablak létrehozása
 - 3.1.1 Az ablakban két fül létrehozása (Szótár és Tanulás fülek)
+- 3.1.2 Feliratok és szövegdobozok létrehozása a szűréshez
