@@ -37,6 +37,7 @@
                      </padding>
                      <children>
                         <Label text="Szűrés:" textAlignment="CENTER" />
+                        <Label text="Lecke:" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </children></AnchorPane>
