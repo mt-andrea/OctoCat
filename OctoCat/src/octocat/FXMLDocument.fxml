@@ -38,6 +38,7 @@
                      <children>
                         <Label text="Lecke:" GridPane.rowIndex="4" />
                         <Label text="Idegen nyelv:" GridPane.rowIndex="5" />
+                        <Label text="Idegen szó:" GridPane.rowIndex="6" />
                      </children>
                   </GridPane>
                </children></AnchorPane>
