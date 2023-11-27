@@ -12,3 +12,6 @@ Az Eszterházy Károly Katolikus Egyetem Bölcsészettudományi és Művészeti 
 - 2.1.1. Tartalmazzon több tájékoztató szöveget a felület.
 - 2.1.2. Legyen még egy oszlop "Idegen nyelv" névvel, tekintettel azokra a hallgatókra, akik több idegen nyelvet tanulnak párhuzamosan.
 - 2.1.3. Az "Angol" nevű oszlopot át kell nevezni. "Idegen nyelvű" legyen a neve, tekintettel azokra a hallgatókra, akik nem angolt tanulnak.
+## 3. A fejlesztés menete
+- 3.1 Az ablak létrehozása
+- 3.1.1 Az ablakban két fül létrehozása (Szótár és Tanulás fülek)
