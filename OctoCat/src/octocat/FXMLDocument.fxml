@@ -45,6 +45,7 @@
                         <Label text="Magyar szó:" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                         <TextField fx:id="txtIdegenNyelvSzuro" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <TextField fx:id="txtIdegenSzoSzuro" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtMagyarSzuro" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
                </children></AnchorPane>
