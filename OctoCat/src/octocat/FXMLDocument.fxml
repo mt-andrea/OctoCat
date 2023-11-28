@@ -36,11 +36,11 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                      <children>
-                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                        <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                        <Button mnemonicParsing="false" text="Új" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" text="Hozzáad" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" text="Módosít" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Button mnemonicParsing="false" text="Töröl" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Button mnemonicParsing="false" text="Szűrők törlése" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                      </children>
                   </GridPane>
                </children></AnchorPane>
