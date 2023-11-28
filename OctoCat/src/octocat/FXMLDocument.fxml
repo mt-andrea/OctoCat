@@ -37,7 +37,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                      <children>
-                        <TableView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                        <TableView fx:id="tblSzavak" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                           <columns>
                             <TableColumn prefWidth="75.0" text="C1" />
                             <TableColumn prefWidth="75.0" text="C2" />
