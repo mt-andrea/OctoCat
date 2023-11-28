@@ -40,7 +40,7 @@
                         <Button mnemonicParsing="false" onMouseClicked="#hozzaad" prefWidth="145.0" text="Hozzáad" GridPane.columnIndex="3" GridPane.rowIndex="4" />
                         <Button mnemonicParsing="false" onMouseClicked="#modosit" prefWidth="145.0" text="Módosít" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                         <Button mnemonicParsing="false" onMouseClicked="#torol" prefWidth="145.0" text="Töröl" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                        <Button mnemonicParsing="false" onMouseClicked="#szuro_torol" prefWidth="145.0" text="Szűrők törlése" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                        <Button mnemonicParsing="false" onKeyPressed="#szuro_torol" onMouseClicked="#szuro_torol" prefWidth="145.0" text="Szűrők törlése" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                      </children>
                   </GridPane>
                </children></AnchorPane>
