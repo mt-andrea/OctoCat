@@ -39,10 +39,10 @@
                      <children>
                         <TableView fx:id="tblSzavak" GridPane.columnSpan="4" GridPane.rowIndex="3">
                           <columns>
-                            <TableColumn fx:id="oLecke" prefWidth="75.0" text="Lecke" />
-                            <TableColumn fx:id="oIdegenNyelv" prefWidth="75.0" text="Idegen nyelv" />
-                              <TableColumn fx:id="oIdegenSzo" prefWidth="75.0" text="Idegen szó" />
-                              <TableColumn fx:id="oMagyar" prefWidth="75.0" text="Magyar" />
+                            <TableColumn fx:id="oLecke" prefWidth="115.0" text="Lecke" />
+                            <TableColumn fx:id="oIdegenNyelv" prefWidth="200.0" text="Idegen nyelv" />
+                              <TableColumn fx:id="oIdegenSzo" prefWidth="200.0" text="Idegen szó" />
+                              <TableColumn fx:id="oMagyar" prefWidth="200.0" text="Magyar" />
                           </columns>
                         </TableView>
                      </children>
