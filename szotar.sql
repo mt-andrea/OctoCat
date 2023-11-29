@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Nov 29. 18:19
+-- Létrehozás ideje: 2023. Nov 29. 18:24
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `szo` (
   `SzoID` int(11) NOT NULL,
-  `Lecke` int(11) NOT NULL,
+  `Lecke` varchar(250) NOT NULL,
   `IdegenSzo` int(11) NOT NULL,
   `IdegenNyelv` int(11) NOT NULL,
   `Magyar` int(11) NOT NULL
@@ -45,6 +45,16 @@ CREATE TABLE `szo` (
 ALTER TABLE `szo`
   ADD PRIMARY KEY (`SzoID`),
   ADD UNIQUE KEY `IdegenSzo` (`IdegenSzo`,`IdegenNyelv`);
+
+--
+-- A kiírt táblák AUTO_INCREMENT értéke
+--
+
+--
+-- AUTO_INCREMENT a táblához `szo`
+--
+ALTER TABLE `szo`
+  MODIFY `SzoID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
