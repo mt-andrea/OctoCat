@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Nov 29. 18:16
+-- Létrehozás ideje: 2023. Nov 29. 18:19
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -43,7 +43,8 @@ CREATE TABLE `szo` (
 -- A tábla indexei `szo`
 --
 ALTER TABLE `szo`
-  ADD PRIMARY KEY (`SzoID`);
+  ADD PRIMARY KEY (`SzoID`),
+  ADD UNIQUE KEY `IdegenSzo` (`IdegenSzo`,`IdegenNyelv`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
