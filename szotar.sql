@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Nov 29. 18:29
+-- Létrehozás ideje: 2023. Nov 29. 18:32
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -32,7 +32,7 @@ CREATE TABLE `szo` (
   `Lecke` varchar(250) NOT NULL,
   `IdegenSzo` varchar(250) NOT NULL,
   `IdegenNyelv` varchar(250) NOT NULL,
-  `Magyar` int(11) NOT NULL
+  `Magyar` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 --
@@ -44,7 +44,8 @@ CREATE TABLE `szo` (
 --
 ALTER TABLE `szo`
   ADD PRIMARY KEY (`SzoID`),
-  ADD UNIQUE KEY `IdegenSzo` (`IdegenSzo`,`IdegenNyelv`);
+  ADD UNIQUE KEY `IdegenSzo` (`IdegenSzo`,`IdegenNyelv`),
+  ADD KEY `Magyar` (`Magyar`);
 
 --
 -- A kiírt táblák AUTO_INCREMENT értéke
