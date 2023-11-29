@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Nov 29. 18:27
+-- Létrehozás ideje: 2023. Nov 29. 18:29
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -31,7 +31,7 @@ CREATE TABLE `szo` (
   `SzoID` int(11) NOT NULL,
   `Lecke` varchar(250) NOT NULL,
   `IdegenSzo` varchar(250) NOT NULL,
-  `IdegenNyelv` int(11) NOT NULL,
+  `IdegenNyelv` varchar(250) NOT NULL,
   `Magyar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
