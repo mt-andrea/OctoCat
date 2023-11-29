@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Nov 29. 18:10
+-- Létrehozás ideje: 2023. Nov 29. 18:16
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -34,6 +34,16 @@ CREATE TABLE `szo` (
   `IdegenNyelv` int(11) NOT NULL,
   `Magyar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+
+--
+-- Indexek a kiírt táblákhoz
+--
+
+--
+-- A tábla indexei `szo`
+--
+ALTER TABLE `szo`
+  ADD PRIMARY KEY (`SzoID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
