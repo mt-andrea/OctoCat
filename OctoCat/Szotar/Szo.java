@@ -8,5 +8,11 @@
  * @author Kati
  */
 public class Szo {
+    private int szoID;
+    private String lecke;
+    private String idegenNyel;
+    private String idegenSzo;
+    private String magyar;
+    
     
 }
