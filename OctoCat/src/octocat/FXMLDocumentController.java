@@ -20,6 +20,7 @@ import java.ResourceBundle;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TableColumn;
 
 /**
  *
