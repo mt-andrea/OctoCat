@@ -95,7 +95,7 @@
                   <Separator layoutX="304.0" layoutY="422.0" prefWidth="200.0" />
                   <VBox layoutX="383.0" layoutY="447.0" prefHeight="18.0" prefWidth="9.0">
                      <children>
-                        <Label id="lblAlso" fx:id="lblAlso" onMouseClicked="#mutat" prefHeight="17.0" prefWidth="17.0" text="?" />
+                        <Label id="lblAlso" fx:id="lblAlso" minWidth="200.0" onMouseClicked="#mutat" prefHeight="17.0" prefWidth="17.0" text="?" />
                      </children>
                   </VBox>
                   <Label layoutX="255.0" layoutY="425.0" text="Kattints a kérdőjelre a megoldás megtekintéséhez!" />
