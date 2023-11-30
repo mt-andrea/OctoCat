@@ -18,5 +18,4 @@ public class DB {
     final String felhasznalo = "";
     final String jelszo = "";
     
-    
 }
