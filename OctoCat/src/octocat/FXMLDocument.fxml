@@ -10,7 +10,6 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
@@ -18,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="octocat.FXMLDocumentController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="octocat.FXMLDocumentController">
   <tabs>
     <Tab fx:id="tabSzotar" text="Szótár">
          <content>
@@ -78,35 +77,48 @@
         </content>
     </Tab>
     <Tab text="Tanulás">
-      <content>
-        <AnchorPane fx:id="lblAlso" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+         <content>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
                <children>
-                  <VBox alignment="CENTER" layoutX="204.0" layoutY="284.0" prefHeight="131.0" prefWidth="341.0" spacing="20.0">
+                  <Label text="A tanulás megkezdéséhez nyomd meg az &quot;Indít&quot; gombot." />
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
                      <children>
-                        <Label prefHeight="47.0" prefWidth="305.0" text="A tanulás megkezdéséhez nyomd meg az &quot;Indít&quot; gombot." />
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                           <children>
-                              <Label text="Válasz lehetőségek" />
-                              <ComboBox prefWidth="150.0" />
-                              <Button mnemonicParsing="false" text="Indít" />
-                           </children>
-                        </HBox>
-                     </children></VBox>
-                  <Separator layoutX="277.0" layoutY="443.0" prefWidth="200.0" />
-                  <VBox layoutX="383.0" layoutY="447.0" prefHeight="18.0" prefWidth="9.0" />
-                  <Label layoutX="254.0" layoutY="456.0" text="Kattints a kérdőjelre a megoldás megtekintéséhez!" />
-                  <Label id="lblAlso" fx:id="lblAlso" layoutX="372.0" layoutY="480.0" minWidth="104.0" onMouseClicked="#mutat" prefHeight="40.0" prefWidth="104.0" text="?">
+                        <Label text="Válassz irányt" />
+                        <ComboBox prefWidth="150.0" />
+                        <Button mnemonicParsing="false" text="Indít" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="lblFelso" text="?">
                      <font>
                         <Font name="System Bold" size="28.0" />
                      </font>
                   </Label>
-                  <Label id="lblFelso" fx:id="lblFelso" layoutX="370.0" layoutY="412.0" text="?">
+                  <Separator prefWidth="200.0" />
+                  <Label text="Kattints a kérdőjelre a megoldás megtekintéséhez!" />
+                  <Label fx:id="lblAlso" alignment="CENTER" contentDisplay="CENTER" minWidth="200.0" onMouseClicked="#mutat" text="?">
                      <font>
                         <Font name="System Bold" size="28.0" />
                      </font>
                   </Label>
-               </children></AnchorPane>
-      </content>
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnTudtam" disable="true" mnemonicParsing="false" onMouseClicked="#tudtam" text="Tudtam" />
+                        <Button fx:id="btnNemTudtam" disable="true" mnemonicParsing="false" onMouseClicked="#nem_tudtam" text="Nem tudtam" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <Label fx:id="lblHanyvan" />
+               </children>
+            </VBox>
+         </content>
                   
     </Tab>
   </tabs>
