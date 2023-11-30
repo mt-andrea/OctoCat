@@ -1,4 +1,4 @@
-/*Made by Andrea Mate, Katalin Andorfer, András Spengler
+/*Made by Andrea Mate, Katalin Andorfer, András Spengler, Bezdán Anita, Kalmár János
 * For practice.
 This is the way! */
 
@@ -28,7 +28,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import panel.Panel;
 /**
  *
- * @author $Mate Andrea, Andorfer Katalin, András Spengler
+ * @author $Mate Andrea, Andorfer Katalin, András Spengler, Bezdán Anita, Kalmár János
  */
 public class OctoCat extends Application {
 
