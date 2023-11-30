@@ -93,7 +93,11 @@
                      </children></VBox>
                   <Label layoutX="383.0" layoutY="407.0" text="?" />
                   <Separator layoutX="304.0" layoutY="422.0" prefWidth="200.0" />
-                  <VBox layoutX="270.0" layoutY="447.0" prefHeight="18.0" prefWidth="286.0" />
+                  <VBox layoutX="383.0" layoutY="447.0" prefHeight="18.0" prefWidth="9.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="17.0" text="?" />
+                     </children>
+                  </VBox>
                   <Label layoutX="255.0" layoutY="425.0" text="Kattints a kérdőjelre a megoldás megtekintéséhez!" />
                </children></AnchorPane>
       </content>
