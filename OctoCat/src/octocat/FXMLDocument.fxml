@@ -16,6 +16,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="octocat.FXMLDocumentController">
   <tabs>
@@ -91,14 +92,19 @@
                            </children>
                         </HBox>
                      </children></VBox>
-                  <Label id="lblFelso" fx:id="lblFelso" layoutX="383.0" layoutY="407.0" text="?" />
-                  <Separator layoutX="304.0" layoutY="422.0" prefWidth="200.0" />
-                  <VBox layoutX="383.0" layoutY="447.0" prefHeight="18.0" prefWidth="9.0">
-                     <children>
-                        <Label id="lblAlso" fx:id="lblAlso" minWidth="200.0" onMouseClicked="#mutat" prefHeight="17.0" prefWidth="17.0" text="?" />
-                     </children>
-                  </VBox>
-                  <Label layoutX="255.0" layoutY="425.0" text="Kattints a kérdőjelre a megoldás megtekintéséhez!" />
+                  <Separator layoutX="277.0" layoutY="443.0" prefWidth="200.0" />
+                  <VBox layoutX="383.0" layoutY="447.0" prefHeight="18.0" prefWidth="9.0" />
+                  <Label layoutX="254.0" layoutY="456.0" text="Kattints a kérdőjelre a megoldás megtekintéséhez!" />
+                  <Label id="lblAlso" fx:id="lblAlso" layoutX="372.0" layoutY="480.0" minWidth="104.0" onMouseClicked="#mutat" prefHeight="40.0" prefWidth="104.0" text="?">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label id="lblFelso" fx:id="lblFelso" layoutX="370.0" layoutY="412.0" text="?">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
                </children></AnchorPane>
       </content>
                   
