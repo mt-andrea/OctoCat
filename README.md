@@ -18,7 +18,7 @@ Az Eszterházy Károly Katolikus Egyetem Bölcsészettudományi és Művészeti 
 - 3.1.2 Szűréshez feliratok és szövegdobozok létrehozása 
 - 3.1.3 Táblázat létrehozása négy oszloppal
 - 3.1.4 Új rekordok létrehozásához feliratok és szövegdobozok létrehozása
-
+- 3.2.1 A Tanulás Tabon elhelyeztem a megfelelő Boxokat a megfelelő feliratokkal.
 
 
 
