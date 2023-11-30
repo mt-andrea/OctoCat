@@ -80,6 +80,7 @@
                         <Label prefHeight="47.0" prefWidth="305.0" text="A tanulás megkezdéséhez nyomd meg az &quot;Indít&quot; gombot." />
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                            <children>
+                              <Label text="Válasz lehetőségek" />
                               <ComboBox prefWidth="150.0" />
                            </children>
                         </HBox>
