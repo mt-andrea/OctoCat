@@ -4,7 +4,7 @@
  */
 package octocat;
 
-import java.sql.connction;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -21,25 +21,23 @@ import panel.Panel;
  */
 public class DB {
     
-    final String url = "";
-    final String felhasznalo = "";
+    final String url = "jdbc:mysql://localhost:3306/szotar?useUnicode=true&characterEncoding=UTF-8";
+    final String felhasznalo = "root";
     final String jelszo = "";
     
     public void beolvas(ObservableList<Szo> tabla, String szoveg){
-        try (Connection kapcsolat = DriverManager.getConnection(url,felhasznalo,jelszo));
-            PreparedStatement ekp = kapcsolat.prepareStatement (szoveg){
-            tabla.clear;
+        try (Connection kapcsolat = DriverManager.getConnection(url,felhasznalo,jelszo);
+            PreparedStatement ekp = kapcsolat.prepareStatement (szoveg)){
+            tabla.clear();
             ResultSet eredmeny = ekp.executeQuery();
-            While (eredmeny.next()){
-                eredmeny.add(
+            while (eredmeny.next()){
+                tabla.add(
                         new Szo(
                                 eredmeny.getInt("SzoID"),
                                 eredmeny.getString("Lecke"),
                                 eredmeny.getString("IdegenSzo"),
                                 eredmeny.getString("IdegenNyelv"),
-                                eredmeny.getString("Magyar")
-                        )
-                )
+                                eredmeny.getString("Magyar")));
             }
         } catch (SQLException hiba) {
             Panel.hiba("Hiba",hiba.getMessage());
