@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import java.awt.Desktop;
 import java.net.URI;
 import java.net.URL;
+import java.util.ArrayList;
 /**
  *
  * @author $Mate Andrea, Andorfer Katalin, András Spengler
