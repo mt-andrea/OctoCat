@@ -9,7 +9,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 /**
  *
  * @author $Mate Andrea, Andorfer Katalin, András Spengler, Bezdán Anita, Kalmár János
