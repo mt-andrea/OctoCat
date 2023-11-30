@@ -42,7 +42,8 @@ public class DB {
                 )
             }
         } catch (SQLException hiba) {
-            
+            Panel.hiba("Hiba",hiba.getMessage());
+            Platform.exit();
         }
     }
     
