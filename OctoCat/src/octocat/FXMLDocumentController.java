@@ -33,15 +33,33 @@ import panel.Panel;
 public class FXMLDocumentController implements Initializable {
 
     @FXML
-    private TextField txtJelszo;    
-    @FXML
-    private Label label;
-    
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+    private TableColumn<Szo, String> oIdegenNyelv;
+     @FXML
+    private TableColumn<Szo, String> oIdegenSzo;
+     @FXML
+    private TableColumn<Szo, String> oLecke;
+     @FXML
+    private TableColumn<Szo, String> oMagyar;
+     @FXML
+    private Tab tabSzotar;
+     @FXML
+    private TableView<Szo> tblSzavak;
+     @FXML
+    private TextField txtIdegenNyelv;
+     @FXML
+    private TextField txtIdegenNyelvSzuro;
+      @FXML
+    private TextField txtIdegenSzo;
+      @FXML
+    private TextField txtIdegenSzoSzuro;
+      @FXML
+    private TextField txtLecke;
+      @FXML
+    private TextField txtLeckeSzuro;
+      @FXML
+    private TextField txtMagyar;
+      @FXML
+    private TextField txtMagyarSzuro;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
