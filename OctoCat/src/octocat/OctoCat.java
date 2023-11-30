@@ -17,6 +17,7 @@ import java.util.Random;
 import java.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 /**
  *
  * @author $Mate Andrea, Andorfer Katalin, András Spengler
