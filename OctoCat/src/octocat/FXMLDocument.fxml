@@ -82,6 +82,7 @@
                            <children>
                               <Label text="Válasz lehetőségek" />
                               <ComboBox prefWidth="150.0" />
+                              <Button mnemonicParsing="false" text="Indít" />
                            </children>
                         </HBox>
                      </children></VBox>
