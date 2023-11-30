@@ -31,6 +31,8 @@ public class FXMLDocumentController implements Initializable {
     private TableColumn<Szo, String> oMagyar;
      @FXML
     private Tab tabSzotar;
+     @FXML
+    private TableView<Szo> tblSzavak;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
