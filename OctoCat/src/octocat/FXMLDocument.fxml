@@ -44,6 +44,10 @@
                   <Label text="Idegen nyelv:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Label text="Idegen szó:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                   <TextField fx:id="txtLeckeSzuro" GridPane.rowIndex="2" />
+                        <Label text="Magyar szó:" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtIdegenNyelvSzuro" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtIdegenSzoSzuro" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtMagyarSzuro" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                   <TableView fx:id="tblSzavak" GridPane.columnSpan="4" GridPane.rowIndex="3">
                     <columns>
                       <TableColumn fx:id="oLecke" prefWidth="115.0" text="Lecke" />
