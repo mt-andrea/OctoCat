@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.awt.Desktop;
+import java.net.URI;
 /**
  *
  * @author $Mate Andrea, Andorfer Katalin, András Spengler
