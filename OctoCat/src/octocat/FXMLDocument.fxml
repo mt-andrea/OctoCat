@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
+
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="octocat.FXMLDocumentController">
   <tabs>
     <Tab fx:id="tabSzotar" text="Szótár">
