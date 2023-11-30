@@ -34,7 +34,11 @@ public class FXMLDocumentController implements Initializable {
     
     DB ab= new DB();
     private void beolvas(){
-        
+        String s = "SELECT * FROM szavak"
+                 + "WHERE lecke LIKE"
+                 + "AND angol LIKE"
+                 + "AND magyar LIKE"
+                 + "ORDER BY angol;";
         
     }
 }
