@@ -19,8 +19,6 @@ Az Eszterházy Károly Katolikus Egyetem Bölcsészettudományi és Művészeti 
 - 3.1.3 Táblázat létrehozása négy oszloppal
 - 3.1.4 Új rekordok létrehozásához feliratok és szövegdobozok létrehozása
 
-
-
-
-
 - 4.1 Adatbázis létrehozása a szavak tárolására
+- 4.2. Osztály létrehozása a szavak tárolására a program futása közben 
+
