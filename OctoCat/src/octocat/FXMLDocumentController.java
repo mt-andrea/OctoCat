@@ -21,7 +21,8 @@ import javafx.scene.control.TextField;
 
 public class FXMLDocumentController implements Initializable {
 
-    
+    @FXML
+    private TableColumn<Szo, String> oIdegenNyelv;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
