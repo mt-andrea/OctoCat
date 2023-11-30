@@ -33,6 +33,8 @@ public class FXMLDocumentController implements Initializable {
     private Tab tabSzotar;
      @FXML
     private TableView<Szo> tblSzavak;
+     @FXML
+    private TextField txtIdegenNyelv;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
