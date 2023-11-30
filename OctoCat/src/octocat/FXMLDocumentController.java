@@ -42,7 +42,7 @@ public class FXMLDocumentController implements Initializable {
                  + "AND angol LIKE" + szuro2
                  + "AND magyar LIKE" + szuro3
                  + "ORDER BY angol;";
-        ab.beolvas(tblSzavak.getItems(), s);
+        ab.beolvas(tblSzavak.getItems(), s );
         
     }
 }
