@@ -35,6 +35,8 @@ public class FXMLDocumentController implements Initializable {
     private TableView<Szo> tblSzavak;
      @FXML
     private TextField txtIdegenNyelv;
+     @FXML
+    private TextField txtIdegenNyelvSzuro;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
