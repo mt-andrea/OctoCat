@@ -25,6 +25,8 @@ public class FXMLDocumentController implements Initializable {
     private TableColumn<Szo, String> oIdegenNyelv;
      @FXML
     private TableColumn<Szo, String> oIdegenSzo;
+     @FXML
+    private TableColumn<Szo, String> oLecke;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
