@@ -33,34 +33,44 @@ import panel.Panel;
 public class FXMLDocumentController implements Initializable {
 
     @FXML
+    private Button btnNemTudtam;
+    @FXML
+    private Button btnTudtam;
+    @FXML
+    private Label lblAlso;
+    @FXML
+    private Label lblFelso;
+    @FXML
+    private Label lblHanyvan;
+    @FXML
     private TableColumn<Szo, String> oIdegenNyelv;
-     @FXML
+    @FXML
     private TableColumn<Szo, String> oIdegenSzo;
-     @FXML
+    @FXML
     private TableColumn<Szo, String> oLecke;
-     @FXML
+    @FXML
     private TableColumn<Szo, String> oMagyar;
-     @FXML
+    @FXML
     private Tab tabSzotar;
-     @FXML
+    @FXML
     private TableView<Szo> tblSzavak;
-     @FXML
+    @FXML
     private TextField txtIdegenNyelv;
-     @FXML
+    @FXML
     private TextField txtIdegenNyelvSzuro;
-      @FXML
+    @FXML
     private TextField txtIdegenSzo;
-      @FXML
+    @FXML
     private TextField txtIdegenSzoSzuro;
-      @FXML
+    @FXML
     private TextField txtLecke;
-      @FXML
+    @FXML
     private TextField txtLeckeSzuro;
-      @FXML
+    @FXML
     private TextField txtMagyar;
-      @FXML
+    @FXML
     private TextField txtMagyarSzuro;
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
