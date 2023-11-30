@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="octocat.FXMLDocumentController">
   <tabs>
     <Tab fx:id="tabSzotar" text="Szótár">
          <content>
@@ -58,6 +59,11 @@
                         <TextField fx:id="txtIdegenNyelv" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                         <TextField fx:id="txtIdegenSzo" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                         <TextField fx:id="txtMagyar" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Button mnemonicParsing="false" onMouseClicked="#uj" prefWidth="145.0" text="Új" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" onMouseClicked="#hozzaad" prefWidth="145.0" text="Hozzáad" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" onMouseClicked="#modosit" prefWidth="145.0" text="Módosít" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Button mnemonicParsing="false" onMouseClicked="#torol" prefWidth="145.0" text="Töröl" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Button cancelButton="true" mnemonicParsing="false" onKeyPressed="#szuro_torol" onMouseClicked="#szuro_torol" prefWidth="145.0" text="Szűrők törlése" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                      </children>
                     </GridPane>
         </content>
