@@ -2,7 +2,9 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -11,10 +13,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="octocat.FXMLDocumentController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="octocat.FXMLDocumentController">
   <tabs>
     <Tab fx:id="tabSzotar" text="Szótár">
          <content>
@@ -75,7 +79,33 @@
     </Tab>
     <Tab text="Tanulás">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        <AnchorPane fx:id="lblAlso" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="204.0" layoutY="284.0" prefHeight="131.0" prefWidth="341.0" spacing="20.0">
+                     <children>
+                        <Label prefHeight="47.0" prefWidth="305.0" text="A tanulás megkezdéséhez nyomd meg az &quot;Indít&quot; gombot." />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label text="Válasz lehetőségek" />
+                              <ComboBox prefWidth="150.0" />
+                              <Button mnemonicParsing="false" text="Indít" />
+                           </children>
+                        </HBox>
+                     </children></VBox>
+                  <Separator layoutX="277.0" layoutY="443.0" prefWidth="200.0" />
+                  <VBox layoutX="383.0" layoutY="447.0" prefHeight="18.0" prefWidth="9.0" />
+                  <Label layoutX="254.0" layoutY="456.0" text="Kattints a kérdőjelre a megoldás megtekintéséhez!" />
+                  <Label id="lblAlso" fx:id="lblAlso" layoutX="372.0" layoutY="480.0" minWidth="104.0" onMouseClicked="#mutat" prefHeight="40.0" prefWidth="104.0" text="?">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label id="lblFelso" fx:id="lblFelso" layoutX="370.0" layoutY="412.0" text="?">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
       </content>
                   
     </Tab>
