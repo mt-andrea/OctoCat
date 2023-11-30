@@ -26,8 +26,10 @@ public class DB {
     final String jelszo = "";
     
     public void beolvas(ObservableList<Szo> tabla, String szoveg){
-        try (Connection kapcsolat = DriverManager.getConnection(url,felhasznalo,jelszo)){
-            
+        try (Connection kapcsolat = DriverManager.getConnection(url,felhasznalo,jelszo));
+            PreparedStatement ekp = kapcsolat.prepareStatement (szoveg){
+            tabla.clear;
+            ResultSet eredmeny = ekp.executeQuery();
         } catch (SQLException hiba) {
             
         }
