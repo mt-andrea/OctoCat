@@ -15,6 +15,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
 import java.ResourceBundle;
+import javafx.fxml.FXML;
 /**
  *
  * @author $Mate Andrea, Andorfer Katalin, András Spengler
