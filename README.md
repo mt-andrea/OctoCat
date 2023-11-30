@@ -23,3 +23,4 @@ Az Eszterházy Károly Katolikus Egyetem Bölcsészettudományi és Művészeti 
 
 
 
+- 4.1 Adatbázis létrehozása a szavak tárolására
