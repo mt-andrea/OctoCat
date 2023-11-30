@@ -32,4 +32,5 @@ public class FXMLDocumentController implements Initializable {
         // TODO
     }    
     
+    DB ab= new DB();
 }
