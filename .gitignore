@@ -2,5 +2,5 @@ OctoCat/nbproject
 OctoCat/build.xml
 OctoCat/manifest.mf
 vs./
-/OctoCat/build/
-/OctoCat/dist/
+OctoCat/build/
+OctoCat/dist/
