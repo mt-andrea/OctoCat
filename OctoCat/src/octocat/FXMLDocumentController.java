@@ -47,6 +47,8 @@ public class FXMLDocumentController implements Initializable {
     private TextField txtLeckeSzuro;
       @FXML
     private TextField txtMagyar;
+      @FXML
+    private TextField txtMagyarSzuro;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
