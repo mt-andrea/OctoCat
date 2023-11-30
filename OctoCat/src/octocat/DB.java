@@ -30,6 +30,17 @@ public class DB {
             PreparedStatement ekp = kapcsolat.prepareStatement (szoveg){
             tabla.clear;
             ResultSet eredmeny = ekp.executeQuery();
+            While (eredmeny.next()){
+                eredmeny.add(
+                        new Szo(
+                                eredmeny.getInt("SzoID"),
+                                eredmeny.getString("Lecke"),
+                                eredmeny.getString("IdegenSzo"),
+                                eredmeny.getString("IdegenNyelv"),
+                                eredmeny.getString("Magyar")
+                        )
+                )
+            }
         } catch (SQLException hiba) {
             
         }
