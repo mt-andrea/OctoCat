@@ -19,7 +19,7 @@ Az Eszterházy Károly Katolikus Egyetem Bölcsészettudományi és Művészeti 
 - 3.1.3 Táblázat létrehozása négy oszloppal
 - 3.1.4 Új rekordok létrehozásához feliratok és szövegdobozok létrehozása
 - 3.2.1 A Tanulás Tabon elhelyeztem a megfelelő Boxokat a megfelelő feliratokkal.
-
+- 3.2.2 A Tanulás Tabon további Labeleket helyeztem el a megfelelő formázumban
 
 
 - 4.1 Adatbázis létrehozása a szavak tárolására
