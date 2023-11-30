@@ -56,7 +56,7 @@
                         <Label text="Magyar:" GridPane.rowIndex="7" />
                         <TextField fx:id="txtLecke" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                         <TextField fx:id="txtIdegenNyelv" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <TextField fx:id="txtIdegenSzó" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="txtIdegenSzo" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                         <TextField fx:id="txtMagyar" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                      </children>
                     </GridPane>
