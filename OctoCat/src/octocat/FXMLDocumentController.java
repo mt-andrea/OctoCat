@@ -34,6 +34,9 @@ public class FXMLDocumentController implements Initializable {
     
     DB ab= new DB();
     private void beolvas(){
+        String szuro1 = "'%" + txtLeckeSzuro.getText() + "%'";
+        String szuro2 = "'%" + txtAngolSzuro.getText() + "%'";
+        String szuro3 = "'%" + txtMagyarSzuro.getText() + "%'";
         String s = "SELECT * FROM szavak"
                  + "WHERE lecke LIKE"
                  + "AND angol LIKE"
