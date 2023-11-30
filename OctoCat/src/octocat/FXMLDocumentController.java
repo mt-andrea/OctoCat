@@ -33,4 +33,8 @@ public class FXMLDocumentController implements Initializable {
     }    
     
     DB ab= new DB();
+    private void beolvas(){
+        
+        
+    }
 }
