@@ -78,7 +78,7 @@
     </Tab>
     <Tab text="Tanulás">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <AnchorPane fx:id="lblAlso" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
                   <VBox alignment="CENTER" layoutX="204.0" layoutY="284.0" prefHeight="131.0" prefWidth="341.0" spacing="20.0">
                      <children>
@@ -91,11 +91,11 @@
                            </children>
                         </HBox>
                      </children></VBox>
-                  <Label layoutX="383.0" layoutY="407.0" text="?" />
+                  <Label id="lblFelso" fx:id="lblFelso" layoutX="383.0" layoutY="407.0" text="?" />
                   <Separator layoutX="304.0" layoutY="422.0" prefWidth="200.0" />
                   <VBox layoutX="383.0" layoutY="447.0" prefHeight="18.0" prefWidth="9.0">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="17.0" text="?" />
+                        <Label id="lblAlso" fx:id="lblAlso" prefHeight="17.0" prefWidth="17.0" text="?" />
                      </children>
                   </VBox>
                   <Label layoutX="255.0" layoutY="425.0" text="Kattints a kérdőjelre a megoldás megtekintéséhez!" />
