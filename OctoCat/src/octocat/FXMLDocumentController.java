@@ -38,9 +38,9 @@ public class FXMLDocumentController implements Initializable {
         String szuro2 = "'%" + txtAngolSzuro.getText() + "%'";
         String szuro3 = "'%" + txtMagyarSzuro.getText() + "%'";
         String s = "SELECT * FROM szavak"
-                 + "WHERE lecke LIKE"
-                 + "AND angol LIKE"
-                 + "AND magyar LIKE"
+                 + "WHERE lecke LIKE" + szuro1
+                 + "AND angol LIKE" + szuro2
+                 + "AND magyar LIKE" + szuro3
                  + "ORDER BY angol;";
         ab.beolvas(tblSzavak.getItems(), s);
         
