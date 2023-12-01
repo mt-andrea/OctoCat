@@ -70,6 +70,15 @@ public class FXMLDocumentController implements Initializable {
     private TextField txtMagyar;
     @FXML
     private TextField txtMagyarSzuro;
+    @FXML
+    void google() throws Exception {
+        String s = "https://translate.google.com/"
+                + "#view=home&op=translate&sl=en&tl=hu&text=";
+        s+= txtAngol.getText().replace(" ", "%20");
+        Desktop.getDesktop().browse(new URI(s));
+        txtMagyar.requstFocus();
+
+    }
 
     @FXML
     void hozzaad() {
