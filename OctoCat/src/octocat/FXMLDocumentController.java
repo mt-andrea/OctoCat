@@ -112,7 +112,7 @@ public class FXMLDocumentController implements Initializable {
         txtIdegenSzo.clear();
         txtLecke.clear();
         txtMagyar.clear();
-        
+        txtLecke.reguestFocus();
     }
     
     @Override
