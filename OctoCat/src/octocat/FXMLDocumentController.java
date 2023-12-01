@@ -73,7 +73,12 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void hozzaad() {
-
+        String lecke = txtLecke.getText();
+        String IdegenNyelv = txtIdegenNyelv.getText();
+        String IdegenSzo = txtIdegenSzo.getText();
+        String Magyar = txtMagyar.getText();         
+         
+       
     }
 
     @FXML
