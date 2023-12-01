@@ -78,6 +78,11 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void modosit() {
+        int index = tblSzavak.getSelectionModel () .getSelectedIndex ();
+        if (index == -1)
+            return;
+        int id = tblSzavak.getItems (). get (index) .getSzoID ();
+        
 
     }
 
