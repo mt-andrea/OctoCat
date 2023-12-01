@@ -84,6 +84,12 @@ public class FXMLDocumentController implements Initializable {
         int id = tblSzavak.getItems (). get (index) .getSzoID ();
         
 
+
+
+
+    int sor = ab.modosit(id, lecke, IdegenNyelv, IdegenSzo, Magyar);
+    
+
     }
 
     @FXML
