@@ -112,7 +112,9 @@ public class FXMLDocumentController implements Initializable {
     }
 
     void tablabol(int sorIndex){
-
+        if (sorIndex!=-1) {
+            
+        }
     }
     
     @Override
