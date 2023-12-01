@@ -44,5 +44,7 @@ public class DB {
             Platform.exit();
         }
     }
-    
+    public int hozzaad (String lecke, String IdegenSzo, String IdegenNyelv, String magyar){
+        
+    }
 }
