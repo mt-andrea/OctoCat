@@ -82,13 +82,38 @@ public class FXMLDocumentController implements Initializable {
         if (index == -1)
             return;
         int id = tblSzavak.getItems (). get (index) .getSzoID ();
-        
+
+        String lecke = txtLecke.getText ();
+        if (lecke.length () < 1 || lecke.length () > 10) {
+            hiba ("Hiba!", "A lecke hossza 1-10 karakter lehet!");
+            txtLecke.requestFocus ();
+            return;
+        }
+        String IdegenNyelv = txtIdegenNyelv.getText ();
+        if (IdegnNyelv.length () < 1 || IdegenNyelv.length () > 10) {
+            hiba ("Hiba!", "Az IdegenNyelv hossza 1-10 karakter lehet!");
+            txtIdegenNyelv.requestFocus ();
+            return;
+        }
+        String IdegenSzo = txtIdegenSzo.getText ();
+        if (IdegnNSzo.length () < 1 || IdegenSzo.length () > 60) {
+            hiba ("Hiba!", "Az IdegenSzó hossza 1-60 karakter lehet!");
+            txtIdegenSzo.requestFocus ();
+            return;
+        }
+        }
+        String Magyar = txtMagyar.getText ();
+        if (lecke.Magyar () < 1 || Magyar.length () > 60) {
+            hiba ("Hiba!", "A Magyar hossza 1-10 karakter lehet!");
+            txtMagyar.requestFocus ();
+            return;
+        }
 
 
 
 
     int sor = ab.modosit(id, lecke, IdegenNyelv, IdegenSzo, Magyar);
-    
+
 
     }
 
