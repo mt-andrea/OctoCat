@@ -95,6 +95,7 @@ public class FXMLDocumentController implements Initializable {
     void szuro_torol() {
         txtIdegenNyelvSzuro.clear();
         txtIdegenSzoSzuro.clear();
+        txtLeckeSzuro.clear();
     }
 
     @FXML
