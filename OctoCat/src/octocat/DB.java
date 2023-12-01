@@ -44,8 +44,17 @@ public class DB {
             Platform.exit();
         }
     }
-    public int hozzaad (String lecke, String IdegenSzo, String IdegenNyelv, String magyar){
-        String s ="INSERT INTO szavak (lecke, IdegenNyelv, IgegenSzo, magyar)"
+    public int hozzaad (String lecke, String IdegenSzo, String IdegenNyelv, String Magyar){
+        String s ="INSERT INTO szavak (lecke, IdegenNyelv, IgegenSzo, Magyar)"
                 + "VALUES (?, ?, ?, ?)";
+        try (Connection kapcs = DriverManager.getConnection (db, user, pass);
+             PreparedStatement ekp = kapcs.prepareStatement (s)) {
+           ekp.setString (1, lecke);
+           ekp.setString (2, IdegenNyelv);
+           ekp.setString (3, IdegenSzo);
+           ekp.setString (4 , Magyar);
+        }
+           
+               
     }
 }
