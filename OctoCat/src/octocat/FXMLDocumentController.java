@@ -71,11 +71,6 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TextField txtMagyarSzuro;
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-
     @FXML
     void hozzaad() {
 
@@ -116,4 +111,9 @@ public class FXMLDocumentController implements Initializable {
 
     }
     
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
+
 }
