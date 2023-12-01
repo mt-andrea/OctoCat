@@ -117,6 +117,7 @@ public class FXMLDocumentController implements Initializable {
             txtIdegenNyelv.setText(""+szo.getIdegenNyelv());
             txtIdegenSzo.setText(""+szo.getIdegenSzo());
             txtLecke.setText(""+szo.getLecke());
+            txtMagyar.setText(""+szo.getMagyar());
         }
     }
     
