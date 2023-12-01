@@ -24,6 +24,10 @@ public class DB {
     final String url = "jdbc:mysql://localhost:3306/szotar?useUnicode=true&characterEncoding=UTF-8";
     final String felhasznalo = "root";
     final String jelszo = "";
+
+    void torol(){
+
+    }
     
     public void beolvas(ObservableList<Szo> tabla, String szoveg){
         try (Connection kapcsolat = DriverManager.getConnection(url,felhasznalo,jelszo);
