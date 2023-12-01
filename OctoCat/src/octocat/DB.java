@@ -53,6 +53,8 @@ public class DB {
            ekp.setString (2, IdegenNyelv);
            ekp.setString (3, IdegenSzo);
            ekp.setString (4 , Magyar);
+           return ekp.executeUpdate();
+           
         }
            
                
