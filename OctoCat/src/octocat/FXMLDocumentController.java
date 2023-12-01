@@ -101,6 +101,11 @@ public class FXMLDocumentController implements Initializable {
            
     }
     int sor = ab.hozzaad (lecke, IdegenNyelv, IdegenSzo, Magyar);
+    if (sor > 0) {
+    beolvas ();
+    uj ();
+    }
+}
 
     @FXML
     void modosit() {
