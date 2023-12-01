@@ -110,6 +110,10 @@ public class FXMLDocumentController implements Initializable {
     void uj() {
 
     }
+
+    void tablabol(){
+        
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
