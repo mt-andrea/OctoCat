@@ -25,7 +25,7 @@ public class DB {
     final String felhasznalo = "root";
     final String jelszo = "";
 
-    void torol(int szoId){
+    public int torol(int szoId){
         String sql = "DELETE FROM szavak WHERE szoID=?;";
     }
     
