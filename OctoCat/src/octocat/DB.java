@@ -26,7 +26,7 @@ public class DB {
     final String jelszo = "";
 
     void torol(int szoId){
-        
+        String sql = "DELETE FROM szavak WHERE szoID=?;";
     }
     
     public void beolvas(ObservableList<Szo> tabla, String szoveg){
