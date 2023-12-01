@@ -32,7 +32,8 @@ public class DB {
             ekp.setInt(1, szoId);
             return ekp.executeUpdate();
         } catch (SQLException e) {
-            
+            Hiba("Törlés",e.getMessage());
+            return 0;
         }
     }
     
