@@ -31,8 +31,8 @@ public class DB {
                 PreparedStatement ekp = kapcs.prepareStatement(sql)){
             ekp.setInt(1, szoId);
             return ekp.executeUpdate();
-        } catch (Exception e) {
-            // TODO: handle exception
+        } catch (SQLException e) {
+            
         }
     }
     
