@@ -29,8 +29,8 @@ public class DB {
         String sql = "DELETE FROM szavak WHERE szoID=?;";
         try (Connection kapcs = DriverManager.getConnection(url, felhasznalo, jelszo);
                 PreparedStatement ekp = kapcs.prepareStatement(sql)){
-            
-            
+            ekp.setInt(1, szoId);
+            return ekp.executeUpdate();
         } catch (Exception e) {
             // TODO: handle exception
         }
