@@ -71,11 +71,51 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TextField txtMagyarSzuro;
 
+    @FXML
+    void hozzaad() {
+
+    }
+
+    @FXML
+    void modosit() {
+
+    }
+
+    @FXML
+    void mutat() {
+
+    }
+
+    @FXML
+    void nem_tudtam() {
+
+    }
+
+    @FXML
+    void szuro_torol() {
+
+    }
+
+    @FXML
+    void torol() {
+
+    }
+
+    @FXML
+    void tudtam() {
+
+    }
+
+    @FXML
+    void uj() {
+
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         oLecke.setCellValueFactory(new PropertyValueFactory<>("lecke"));
         oAngol.setCellValueFactory(new PropertyValueFactory<>("angol"));
         oMagyar.setCellValueFactory(new PropertyValueFactory<>("magyar"));
     }    
-    
+
 }
