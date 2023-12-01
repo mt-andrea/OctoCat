@@ -71,6 +71,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TextField txtMagyarSzuro;
 
+    private DB db;
+
     @FXML
     void hozzaad() {
 
