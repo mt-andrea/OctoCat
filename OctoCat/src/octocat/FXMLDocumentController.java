@@ -109,7 +109,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     void uj() {
         txtIdegenNyelv.clear();
-        txtIdegenSzoSzuro.clear();
+        txtIdegenSzo.clear();
         
     }
     
