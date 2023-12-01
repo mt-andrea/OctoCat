@@ -27,6 +27,13 @@ public class DB {
 
     public int torol(int szoId){
         String sql = "DELETE FROM szavak WHERE szoID=?;";
+        try (Connection kapcs = DriverManager.getConnection(url, felhasznalo, jelszo);
+                PreparedStatement ekp = kapcs.prepareStatement(sql)){
+            
+            
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
     }
     
     public void beolvas(ObservableList<Szo> tabla, String szoveg){
