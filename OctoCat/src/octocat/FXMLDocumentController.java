@@ -77,42 +77,42 @@ public class FXMLDocumentController implements Initializable {
     }    
 
     @FXML
-    void hozzaad(MouseEvent event) {
+    void hozzaad() {
 
     }
 
     @FXML
-    void modosit(MouseEvent event) {
+    void modosit() {
 
     }
 
     @FXML
-    void mutat(MouseEvent event) {
+    void mutat() {
 
     }
 
     @FXML
-    void nem_tudtam(MouseEvent event) {
+    void nem_tudtam() {
 
     }
 
     @FXML
-    void szuro_torol(MouseEvent event) {
+    void szuro_torol() {
 
     }
 
     @FXML
-    void torol(MouseEvent event) {
+    void torol() {
 
     }
 
     @FXML
-    void tudtam(MouseEvent event) {
+    void tudtam() {
 
     }
 
     @FXML
-    void uj(MouseEvent event) {
+    void uj() {
 
     }
     
