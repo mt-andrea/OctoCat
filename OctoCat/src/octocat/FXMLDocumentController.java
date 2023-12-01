@@ -99,12 +99,10 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     void torol() {
         int index = tblSzavak.getSelectionModel().getSelectionIndex();
-        if (index==-1) {
+        if (index==-1)
             return;   
-        }
-        if (!igennem("Törlés","Biztosan törölni szeretné a kijelölt sort?")) {
+        if (!igennem("Törlés","Biztosan törölni szeretné a kijelölt sort?"))
             return;
-        }
     }
 
     @FXML
