@@ -113,6 +113,7 @@ public class FXMLDocumentController implements Initializable {
         txtLecke.clear();
         txtMagyar.clear();
         txtLecke.reguestFocus();
+        tblSzavak.getSelectionModel().select(null);
     }
     
     @Override
