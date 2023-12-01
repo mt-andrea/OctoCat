@@ -108,7 +108,7 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void uj() {
-
+        txtIdegenNyelvSzuro.clear();
     }
     
     @Override
