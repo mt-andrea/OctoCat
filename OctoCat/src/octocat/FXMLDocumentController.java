@@ -55,7 +55,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TableView<Szo> tblSzavak;
     @FXML
-    private TextField txtIdegenNyelv;
+    private java.awt.TextField txtIdegenNyelv;
     @FXML
     private TextField txtIdegenNyelvSzuro;
     @FXML
@@ -114,6 +114,7 @@ public class FXMLDocumentController implements Initializable {
     void tablabol(int sorIndex){
         if (sorIndex!=-1) {
             Szo szo = tblSzavak.getItems().get(sorIndex);
+            txtIdegenNyelv.setText(""+szo.getIdegenNyelv());
         }
     }
     
