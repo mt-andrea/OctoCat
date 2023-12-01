@@ -93,7 +93,7 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void szuro_torol() {
-
+        txtIdegenNyelvSzuro.clear();
     }
 
     @FXML
