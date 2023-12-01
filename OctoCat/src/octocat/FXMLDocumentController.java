@@ -124,6 +124,9 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        tblSzavak.getSelectionModel().selectedIndexProperty().addListener(
+            (o,regi,uj) -> tablabol(uj.intValue())
+        );
     }    
 
 }
