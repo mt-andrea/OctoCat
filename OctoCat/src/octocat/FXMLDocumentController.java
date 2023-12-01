@@ -106,6 +106,7 @@ public class FXMLDocumentController implements Initializable {
         if (!igennem("Törlés","Biztosan törölni szeretné a kijelölt sort?"))
             return;
         int id = tblSzavak.getItems().get(index).getSzoID();
+        int sor = db.torol(id);
     }
 
     @FXML
