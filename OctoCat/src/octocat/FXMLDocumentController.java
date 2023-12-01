@@ -75,5 +75,45 @@ public class FXMLDocumentController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    void hozzaad(MouseEvent event) {
+
+    }
+
+    @FXML
+    void modosit(MouseEvent event) {
+
+    }
+
+    @FXML
+    void mutat(MouseEvent event) {
+
+    }
+
+    @FXML
+    void nem_tudtam(MouseEvent event) {
+
+    }
+
+    @FXML
+    void szuro_torol(MouseEvent event) {
+
+    }
+
+    @FXML
+    void torol(MouseEvent event) {
+
+    }
+
+    @FXML
+    void tudtam(MouseEvent event) {
+
+    }
+
+    @FXML
+    void uj(MouseEvent event) {
+
+    }
     
 }
