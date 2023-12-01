@@ -25,8 +25,8 @@ public class DB {
     final String felhasznalo = "root";
     final String jelszo = "";
 
-    void torol(){
-
+    void torol(int szoId){
+        
     }
     
     public void beolvas(ObservableList<Szo> tabla, String szoveg){
