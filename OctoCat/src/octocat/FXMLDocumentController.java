@@ -116,6 +116,7 @@ public class FXMLDocumentController implements Initializable {
             Szo szo = tblSzavak.getItems().get(sorIndex);
             txtIdegenNyelv.setText(""+szo.getIdegenNyelv());
             txtIdegenSzo.setText(""+szo.getIdegenSzo());
+            txtLecke.setText(""+szo.getLecke());
         }
     }
     
