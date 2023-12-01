@@ -74,7 +74,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        txtIdegenNyelvSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> {});
+        txtIdegenNyelvSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
         txtIdegenSzoSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> {});
         txtLeckeSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> {});
         txtMagyarSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> {});
