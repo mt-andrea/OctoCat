@@ -97,6 +97,7 @@ public class FXMLDocumentController implements Initializable {
         txtIdegenSzoSzuro.clear();
         txtLeckeSzuro.clear();
         txtMagyarSzuro.clear();
+        tblSzavak.requestFocus();
     }
 
     @FXML
