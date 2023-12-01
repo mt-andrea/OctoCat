@@ -77,7 +77,7 @@ public class FXMLDocumentController implements Initializable {
         txtIdegenNyelvSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> {});
         txtIdegenSzoSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> {});
         txtLeckeSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> {});
-        txtMagyarSzuro.textProperty().addListener();
+        txtMagyarSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> {});
     }    
     
 }
