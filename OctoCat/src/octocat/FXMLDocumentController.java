@@ -111,8 +111,8 @@ public class FXMLDocumentController implements Initializable {
 
     }
 
-    void tablabol(){
-        
+    void tablabol(int sorIndex){
+
     }
     
     @Override
