@@ -54,9 +54,11 @@ public class DB {
            ekp.setString (3, IdegenSzo);
            ekp.setString (4 , Magyar);
            return ekp.executeUpdate();
-           
         }
-           
+           catch (SQLException ex){
+             hiba ("Hozzáadás", ex.getMessage());
+               return 0;
+           }
                
     }
 }
