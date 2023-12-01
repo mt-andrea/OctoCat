@@ -77,9 +77,9 @@ public class FXMLDocumentController implements Initializable {
         String IdegenNyelv = txtIdegenNyelv.getText();
         String IdegenSzo = txtIdegenSzo.getText();
         String Magyar = txtMagyar.getText();         
-         
-       
+           
     }
+    int sor = ab.hozzaad (lecke, IdegenNyelv, IdegenSzo, Magyar);
 
     @FXML
     void modosit() {
