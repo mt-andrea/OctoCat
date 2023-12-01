@@ -111,6 +111,7 @@ public class FXMLDocumentController implements Initializable {
         txtIdegenNyelv.clear();
         txtIdegenSzo.clear();
         txtLecke.clear();
+        txtMagyar.clear();
         
     }
     
