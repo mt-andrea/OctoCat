@@ -109,12 +109,15 @@ public class FXMLDocumentController implements Initializable {
             return;
         }
 
-
-
-
     int sor = ab.modosit(id, lecke, IdegenNyelv, IdegenSzo, Magyar);
-
-
+    if (sor  0) {
+        beolvas ();
+        for (int i = 0; i < tblSzavak.getItems (). size (); i++) {
+            if (tblSzavak.getItems().get (i).getSzoID () == id){
+                tblSzavak.getSelectionModel ().select (i);
+                break;
+            }
+        }
     }
 
     @FXML
