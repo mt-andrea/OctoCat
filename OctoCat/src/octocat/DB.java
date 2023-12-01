@@ -44,5 +44,10 @@ public class DB {
             Platform.exit();
         }
     }
-    
+    public int modosit (int id, String lecke, String IdegenNyelv, String IegenSzo, String Magyar) {
+        String s = "UPDATE szavak SET lecke= ?, IdegenNyelv=?, IdegenSzo=?, Magyar=? "
+                 + "WHERE szID=?";
+
+
+    }
 }
