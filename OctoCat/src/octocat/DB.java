@@ -45,6 +45,7 @@ public class DB {
         }
     }
     public int hozzaad (String lecke, String IdegenSzo, String IdegenNyelv, String magyar){
-        
+        String s ="INSERT INTO szavak (lecke, IdegenNyelv, IgegenSzo, magyar)"
+                + "VALUES (?, ?, ?, ?)";
     }
 }
