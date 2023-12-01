@@ -75,5 +75,45 @@ public class FXMLDocumentController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    void hozzaad() {
+
+    }
+
+    @FXML
+    void modosit() {
+
+    }
+
+    @FXML
+    void mutat() {
+
+    }
+
+    @FXML
+    void nem_tudtam() {
+
+    }
+
+    @FXML
+    void szuro_torol() {
+
+    }
+
+    @FXML
+    void torol() {
+
+    }
+
+    @FXML
+    void tudtam() {
+
+    }
+
+    @FXML
+    void uj() {
+
+    }
     
 }
