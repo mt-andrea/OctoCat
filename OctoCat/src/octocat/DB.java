@@ -55,10 +55,12 @@ public class DB {
             ekp.setString (4, Magyar);
             ekp. setInt (5, id);
             return ekp.executeUpdate ();
-            
-
+        } catch (SQLException ex) {
+            hiba ("Modósítás", ex.getMessage());
+            return 0;
+        }
                 
-                }
+                
 
     }
 }
