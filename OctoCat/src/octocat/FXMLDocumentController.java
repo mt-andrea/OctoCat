@@ -98,7 +98,10 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void torol() {
-
+        int index = tblSzavak.getSelectionModel().getSelectionIndex();
+        if (index==-1) {
+            return;   
+        }
     }
 
     @FXML
