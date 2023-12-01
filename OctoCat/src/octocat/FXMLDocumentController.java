@@ -74,7 +74,18 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     void hozzaad() {
         String lecke = txtLecke.getText();
+        if (lecke.length() < 1 || lecke.length() > 10) {
+            hiba ("Hiba!", "A lecke hozza 1-10 karakter lehet!");
+            txtLecke.requestFocus();
+            return;
+        }
         String IdegenNyelv = txtIdegenNyelv.getText();
+        if (IdegenNyelv.length() < 1 || IdegenNyelv.length() > 10) {
+            hiba ("Hiba!", "Az IdegenNyelv hozza 1-10 karakter lehet!");
+            txtIdegenNyelv.requestFocus();
+            return;
+        }   
+            
         String IdegenSzo = txtIdegenSzo.getText();
         String Magyar = txtMagyar.getText();         
            
