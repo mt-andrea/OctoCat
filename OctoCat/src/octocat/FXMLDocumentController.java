@@ -79,13 +79,15 @@ public class FXMLDocumentController implements Initializable {
     DB ab= new DB();
     private void beolvas(){
         String szuro1 = "'%" + txtLeckeSzuro.getText() + "%'";
-        String szuro2 = "'%" + txtAngolSzuro.getText() + "%'";
+        String szuro2 = "'%" + txtIdegenSzoSzuro.getText() + "%'";
         String szuro3 = "'%" + txtMagyarSzuro.getText() + "%'";
+        String szuro4 = "'%" + txtIdegenNyelvSzuro.getText() + "%'";
         String s = "SELECT * FROM szavak"
                  + "WHERE lecke LIKE" + szuro1
-                 + "AND angol LIKE" + szuro2
+                 + "AND idegenszo LIKE" + szuro2
                  + "AND magyar LIKE" + szuro3
-                 + "ORDER BY angol;";
+                 + "AND idegenNyelv LIKE" + szuro4
+                 + "ORDER BY idegenszo;";
         ab.beolvas(tblSzavak.getItems(), s );
         
     }
