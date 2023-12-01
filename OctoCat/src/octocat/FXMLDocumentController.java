@@ -114,8 +114,9 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         oLecke.setCellValueFactory(new PropertyValueFactory<>("lecke"));
-        oAngol.setCellValueFactory(new PropertyValueFactory<>("angol"));
+        oIdegenNyelv.setCellValueFactory(new PropertyValueFactory<>("idegenNyelv"));
         oMagyar.setCellValueFactory(new PropertyValueFactory<>("magyar"));
+        oIdegenSzo.setCellValueFactory(new PropertyValueFactory<>("idegenSzo"));
     }    
 
 }
