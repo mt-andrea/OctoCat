@@ -107,6 +107,9 @@ public class FXMLDocumentController implements Initializable {
             return;
         int id = tblSzavak.getItems().get(index).getSzoID();
         int sor = db.torol(id);
+        if (sor > 0) {
+            beolvas();
+        }
     }
 
     @FXML
