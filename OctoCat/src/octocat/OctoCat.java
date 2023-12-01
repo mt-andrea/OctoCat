@@ -1,4 +1,4 @@
-/*Made by Andrea Mate, Katalin Andorfer, András Spengler, Bezdán Anita, Kalmár János
+/*Made by Andrea Mate, Katalin Andorfer, András Spengler, Bezdán Anita, Kalmár János, Tamás Nagy
 * For practice.
 This is the way! */
 
