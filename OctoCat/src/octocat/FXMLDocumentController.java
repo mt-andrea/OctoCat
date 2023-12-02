@@ -31,7 +31,7 @@ import panel.Panel;
 
 
 public class FXMLDocumentController implements Initializable {
-
+    DB ab= new DB();
     @FXML
     private Button btnNemTudtam;
     @FXML
@@ -71,10 +71,67 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TextField txtMagyarSzuro;
 
+    @FXML
+    void hozzaad() {
+
+    }
+
+    @FXML
+    void modosit() {
+
+    }
+
+    @FXML
+    void mutat() {
+
+    }
+
+    @FXML
+    void nem_tudtam() {
+
+    }
+
+    @FXML
+    void szuro_torol() {
+
+    }
+
+    @FXML
+    void torol() {
+
+    }
+
+    @FXML
+    void tudtam() {
+
+    }
+
+    @FXML
+    void uj() {
+
+    }
+    private void beolvas(){
+        String szuro1 = "'%" + txtLeckeSzuro.getText() + "%'";
+        String szuro2 = "'%" + txtIdegenSzoSzuro.getText() + "%'";
+        String szuro3 = "'%" + txtMagyarSzuro.getText() + "%'";
+        String szuro4 = "'%" + txtIdegenNyelvSzuro.getText() + "%'";
+        String s = "SELECT * FROM szavak"
+                 + "WHERE lecke LIKE" + szuro1
+                 + "AND idegenszo LIKE" + szuro2
+                 + "AND magyar LIKE" + szuro3
+                 + "AND idegenNyelv LIKE" + szuro4
+                 + "ORDER BY idegenszo;";
+        ab.beolvas(tblSzavak.getItems(), s );
+        
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-        txtIdegenNyelvSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
+        beolvas();   
+        oLecke.setCellValueFactory(new PropertyValueFactory<>("lecke"));
+        oIdegenNyelv.setCellValueFactory(new PropertyValueFactory<>("idegenNyelv"));
+        oMagyar.setCellValueFactory(new PropertyValueFactory<>("magyar"));
+        oIdegenSzo.setCellValueFactory(new PropertyValueFactory<>("idegenSzo"));
+         txtIdegenNyelvSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
         txtIdegenSzoSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
         txtLeckeSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
         txtMagyarSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
