@@ -93,7 +93,11 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void szuro_torol() {
-
+        txtIdegenNyelvSzuro.clear();
+        txtIdegenSzoSzuro.clear();
+        txtLeckeSzuro.clear();
+        txtMagyarSzuro.clear();
+        tblSzavak.requestFocus();
     }
 
     @FXML
@@ -108,7 +112,12 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void uj() {
-
+        txtIdegenNyelv.clear();
+        txtIdegenSzo.clear();
+        txtLecke.clear();
+        txtMagyar.clear();
+        txtLecke.reguestFocus();
+        tblSzavak.getSelectionModel().select(null);
     }
     private void beolvas(){
         String szuro1 = "'%" + txtLeckeSzuro.getText() + "%'";
