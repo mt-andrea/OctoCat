@@ -101,7 +101,7 @@ public class FXMLDocumentController implements Initializable {
             txtIdegenSzo.requestFocus ();
             return;
         }
-        }
+        
         String Magyar = txtMagyar.getText ();
         if (lecke.Magyar () < 1 || Magyar.length () > 60) {
             hiba ("Hiba!", "A Magyar hossza 1-10 karakter lehet!");
@@ -110,7 +110,7 @@ public class FXMLDocumentController implements Initializable {
         }
 
     int sor = ab.modosit(id, lecke, IdegenNyelv, IdegenSzo, Magyar);
-    if (sor  0) {
+    if (sor > 0) {
         beolvas ();
         for (int i = 0; i < tblSzavak.getItems (). size (); i++) {
             if (tblSzavak.getItems().get (i).getSzoID () == id){
@@ -119,7 +119,7 @@ public class FXMLDocumentController implements Initializable {
             }
         }
     }
-
+}
     @FXML
     void mutat() {
 
