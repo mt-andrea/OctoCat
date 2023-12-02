@@ -98,8 +98,6 @@ public class FXMLDocumentController implements Initializable {
             txtMagyar.requestFocus();
             return;
         }   
-           
-    }
     int sor = ab.hozzaad (lecke, IdegenNyelv, IdegenSzo, Magyar);
     if (sor > 0) {
     beolvas ();
