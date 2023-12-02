@@ -59,6 +59,22 @@ public class DB {
              hiba ("Hozzáadás", ex.getMessage());
                return 0;
            }
-               
+    }
+    
+    public int modosit (int id, String lecke, String IdegenNyelv, String IegenSzo, String Magyar) {
+        String s = "UPDATE szavak SET lecke= ?, IdegenNyelv=?, IdegenSzo=?, Magyar=? "
+                 + "WHERE szID=?";
+        try (Connection kapcs = DriverManager.getConnection (db, user, pass);
+                PreparedStatement ekp = kapcs.prepareStatement (s)) {
+            ekp.setString (1, lecke);
+            ekp.setString (2, IdegenNyelv);
+            ekp.setString (3, IdegenSzo);
+            ekp.setString (4, Magyar);
+            ekp. setInt (5, id);
+            return ekp.executeUpdate ();
+        } catch (SQLException ex) {
+            hiba ("Modósítás", ex.getMessage());
+            return 0;
+        }
     }
 }

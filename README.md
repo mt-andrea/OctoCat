@@ -29,3 +29,4 @@ Az Eszterházy Károly Katolikus Egyetem Bölcsészettudományi és Művészeti 
 - 4.2. Osztály létrehozása a szavak tárolására a program futása közben 
 - 4.3 Controll objektumok átmásolása a Controll osztályba
 - 4.4 Az adatbázisba való beszúrás hozzáadása
+- 4.5 Rekordok módosításának megoldása
