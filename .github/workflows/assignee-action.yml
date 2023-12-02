@@ -12,15 +12,6 @@ permissions:
   pull-requests: write
 
 jobs:
-  add-to-project:
-    name: Add to project
-    runs-on: ubuntu-latest
-    steps:
-      - name: Add to project (issues and PRs)
-        uses: actions/add-to-project@main
-        with:
-          project-url: https://github.com/users/sebastian-sommerfeld-io/projects/1
-          github-token: ${{ secrets.GH_TOKEN_REPO_AND_PROJECT }}
 
   assign-issue-to-user:
     name: Assign to user
