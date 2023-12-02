@@ -144,8 +144,15 @@ public class FXMLDocumentController implements Initializable {
         }
     }
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL url, ResourceBundle rb) {beolvas();   
+        oLecke.setCellValueFactory(new PropertyValueFactory<>("lecke"));
+        oIdegenNyelv.setCellValueFactory(new PropertyValueFactory<>("idegenNyelv"));
+        oMagyar.setCellValueFactory(new PropertyValueFactory<>("magyar"));
+        oIdegenSzo.setCellValueFactory(new PropertyValueFactory<>("idegenSzo"));
+         txtIdegenNyelvSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
+        txtIdegenSzoSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
+        txtLeckeSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
+        txtMagyarSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
         tblSzavak.getSelectionModel().selectedIndexProperty().addListener(
             (o,regi,uj) -> tablabol(uj.intValue())
         );
