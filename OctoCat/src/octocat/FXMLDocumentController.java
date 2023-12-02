@@ -31,7 +31,7 @@ import panel.Panel;
 
 
 public class FXMLDocumentController implements Initializable {
-
+    DB ab= new DB();
     @FXML
     private Button btnNemTudtam;
     @FXML
@@ -55,7 +55,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TableView<Szo> tblSzavak;
     @FXML
-    private TextField txtIdegenNyelv;
+    private java.awt.TextField txtIdegenNyelv;
     @FXML
     private TextField txtIdegenNyelvSzuro;
     @FXML
@@ -73,8 +73,37 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void hozzaad() {
-
+        String lecke = txtLecke.getText();
+        if (lecke.length() < 1 || lecke.length() > 10) {
+            hiba ("Hiba!", "A lecke hossza 1-10 karakter lehet!");
+            txtLecke.requestFocus();
+            return;
+        }
+        String IdegenNyelv = txtIdegenNyelv.getText();
+        if (IdegenNyelv.length() < 1 || IdegenNyelv.length() > 10) {
+            hiba ("Hiba!", "Az IdegenNyelv hossza 1-10 karakter lehet!");
+            txtIdegenNyelv.requestFocus();
+            return;
+        }   
+            
+        String IdegenSzo = txtIdegenSzo.getText();
+        if (IdegenSzo.length() < 1 || IdegenSzo.length() > 60) {
+            hiba ("Hiba!", "Az IdegenSzo hossza 1-60 karakter lehet!");
+            txtIdegenSzo.requestFocus();
+            return;
+        }   
+        String Magyar = txtMagyar.getText();  
+         if (Magyar.length() < 1 || Magyar.length() > 60) {
+            hiba ("Hiba!", "A Magyar hossza 1-60 karakter lehet!");
+            txtMagyar.requestFocus();
+            return;
+        }   
+    int sor = ab.hozzaad (lecke, IdegenNyelv, IdegenSzo, Magyar);
+    if (sor > 0) {
+    beolvas ();
+    uj ();
     }
+}
 
     @FXML
     void modosit() {
@@ -132,7 +161,11 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void szuro_torol() {
-
+        txtIdegenNyelvSzuro.clear();
+        txtIdegenSzoSzuro.clear();
+        txtLeckeSzuro.clear();
+        txtMagyarSzuro.clear();
+        tblSzavak.requestFocus();
     }
 
     @FXML
@@ -147,12 +180,50 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void uj() {
-
+        txtIdegenNyelv.clear();
+        txtIdegenSzo.clear();
+        txtLecke.clear();
+        txtMagyar.clear();
+        txtLecke.reguestFocus();
+        tblSzavak.getSelectionModel().select(null);
     }
     
+    private void beolvas(){
+        String szuro1 = "'%" + txtLeckeSzuro.getText() + "%'";
+        String szuro2 = "'%" + txtIdegenSzoSzuro.getText() + "%'";
+        String szuro3 = "'%" + txtMagyarSzuro.getText() + "%'";
+        String szuro4 = "'%" + txtIdegenNyelvSzuro.getText() + "%'";
+        String s = "SELECT * FROM szavak"
+                 + "WHERE lecke LIKE" + szuro1
+                 + "AND idegenszo LIKE" + szuro2
+                 + "AND magyar LIKE" + szuro3
+                 + "AND idegenNyelv LIKE" + szuro4
+                 + "ORDER BY idegenszo;";
+        ab.beolvas(tblSzavak.getItems(), s );
+        
+    }
+    void tablabol(int sorIndex){
+        if (sorIndex!=-1) {
+            Szo szo = tblSzavak.getItems().get(sorIndex);
+            txtIdegenNyelv.setText(""+szo.getIdegenNyelv());
+            txtIdegenSzo.setText(""+szo.getIdegenSzo());
+            txtLecke.setText(""+szo.getLecke());
+            txtMagyar.setText(""+szo.getMagyar());
+        }
+    }
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL url, ResourceBundle rb) {beolvas();   
+        oLecke.setCellValueFactory(new PropertyValueFactory<>("lecke"));
+        oIdegenNyelv.setCellValueFactory(new PropertyValueFactory<>("idegenNyelv"));
+        oMagyar.setCellValueFactory(new PropertyValueFactory<>("magyar"));
+        oIdegenSzo.setCellValueFactory(new PropertyValueFactory<>("idegenSzo"));
+         txtIdegenNyelvSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
+        txtIdegenSzoSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
+        txtLeckeSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
+        txtMagyarSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
+        tblSzavak.getSelectionModel().selectedIndexProperty().addListener(
+            (o,regi,uj) -> tablabol(uj.intValue())
+        );
     }    
-
+    
 }
