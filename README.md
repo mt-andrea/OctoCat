@@ -24,5 +24,9 @@ Az Eszterházy Károly Katolikus Egyetem Bölcsészettudományi és Művészeti 
 
 
 - 4.1 Adatbázis létrehozása a szavak tárolására
+- 4.1.1. A controller osztályban létrehoztam egy példányt a DB osztályból.
+- 4.1.2. Megírtam a beolvas metódust.
 - 4.2. Osztály létrehozása a szavak tárolására a program futása közben 
 - 4.3 Controll objektumok átmásolása a Controll osztályba
+
+

@@ -31,7 +31,7 @@ import panel.Panel;
 
 
 public class FXMLDocumentController implements Initializable {
-
+    DB ab= new DB();
     @FXML
     private Button btnNemTudtam;
     @FXML
@@ -110,13 +110,27 @@ public class FXMLDocumentController implements Initializable {
     void uj() {
 
     }
-    
+    private void beolvas(){
+        String szuro1 = "'%" + txtLeckeSzuro.getText() + "%'";
+        String szuro2 = "'%" + txtIdegenSzoSzuro.getText() + "%'";
+        String szuro3 = "'%" + txtMagyarSzuro.getText() + "%'";
+        String szuro4 = "'%" + txtIdegenNyelvSzuro.getText() + "%'";
+        String s = "SELECT * FROM szavak"
+                 + "WHERE lecke LIKE" + szuro1
+                 + "AND idegenszo LIKE" + szuro2
+                 + "AND magyar LIKE" + szuro3
+                 + "AND idegenNyelv LIKE" + szuro4
+                 + "ORDER BY idegenszo;";
+        ab.beolvas(tblSzavak.getItems(), s );
+        
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        beolvas();   
         oLecke.setCellValueFactory(new PropertyValueFactory<>("lecke"));
         oIdegenNyelv.setCellValueFactory(new PropertyValueFactory<>("idegenNyelv"));
         oMagyar.setCellValueFactory(new PropertyValueFactory<>("magyar"));
         oIdegenSzo.setCellValueFactory(new PropertyValueFactory<>("idegenSzo"));
-    }    
-
+     }    
+    
 }
