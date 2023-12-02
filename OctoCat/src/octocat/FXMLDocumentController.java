@@ -31,7 +31,7 @@ import panel.Panel;
 
 
 public class FXMLDocumentController implements Initializable {
-
+    DB ab= new DB();
     @FXML
     private Button btnNemTudtam;
     @FXML
@@ -93,7 +93,11 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void szuro_torol() {
-
+        txtIdegenNyelvSzuro.clear();
+        txtIdegenSzoSzuro.clear();
+        txtLeckeSzuro.clear();
+        txtMagyarSzuro.clear();
+        tblSzavak.requestFocus();
     }
 
     @FXML
@@ -108,9 +112,28 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void uj() {
-
+        txtIdegenNyelv.clear();
+        txtIdegenSzo.clear();
+        txtLecke.clear();
+        txtMagyar.clear();
+        txtLecke.reguestFocus();
+        tblSzavak.getSelectionModel().select(null);
     }
-
+    
+    private void beolvas(){
+        String szuro1 = "'%" + txtLeckeSzuro.getText() + "%'";
+        String szuro2 = "'%" + txtIdegenSzoSzuro.getText() + "%'";
+        String szuro3 = "'%" + txtMagyarSzuro.getText() + "%'";
+        String szuro4 = "'%" + txtIdegenNyelvSzuro.getText() + "%'";
+        String s = "SELECT * FROM szavak"
+                 + "WHERE lecke LIKE" + szuro1
+                 + "AND idegenszo LIKE" + szuro2
+                 + "AND magyar LIKE" + szuro3
+                 + "AND idegenNyelv LIKE" + szuro4
+                 + "ORDER BY idegenszo;";
+        ab.beolvas(tblSzavak.getItems(), s );
+        
+    }
     void tablabol(int sorIndex){
         if (sorIndex!=-1) {
             Szo szo = tblSzavak.getItems().get(sorIndex);
@@ -120,7 +143,6 @@ public class FXMLDocumentController implements Initializable {
             txtMagyar.setText(""+szo.getMagyar());
         }
     }
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -128,5 +150,5 @@ public class FXMLDocumentController implements Initializable {
             (o,regi,uj) -> tablabol(uj.intValue())
         );
     }    
-
+    
 }
