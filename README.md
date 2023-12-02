@@ -1,4 +1,10 @@
 # Octocat szótár alkalmazás
+# Gépigény minimum:
+CPU: Intel Core i5-8400
+RAM: 8 GB RAM
+GPU: Nvidia GeForce GTX 1050
+OS: Windows 10 64-bit
+STO: 4 GB available space
 
 ## 1. Ügyfél igény
 Az Eszterházy Károly Katolikus Egyetem Bölcsészettudományi és Művészeti Kara felkért minket arra, hogy egy a hallgatók szókincs fejlesztését támogató alkalmazást készítsünk.
