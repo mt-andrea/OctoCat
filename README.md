@@ -29,3 +29,20 @@ Az Eszterházy Károly Katolikus Egyetem Bölcsészettudományi és Művészeti 
 - 3.2.5 Controll objektumok átmásolása a Controll osztályba
 - 3.2.6 Az adatbázisba való beszúrás hozzáadása
 - 3.2.7 Rekordok módosításának megoldása
+## 4. Tesztelés
+- 4.1 Szavak hozzáadásának tesztelése.
+- - 4.1.1 Elvárt viselkedés: az alsó szövegmezőkbe beírt adatoknak az eltárolása az adatbázisban a 'Hozzáad' gomb megnyomására.
+- - 4.1.2 Tesztadatok: Lecke: 01, Idegen nyelv: angol, Idegen szó: mother, Magyar: anya
+- - 4.1.3 Tapasztalt viselkedés: a szövegmezőkbe beírt adatok megjelentek a táblázatban. Ebből lehet következtetni, hogy az adatbázisba is bekerültek.
+- 4.2 A táblázatban történő kiválasztás tesztelése.
+- - 4.2.1 Elvárt viselkedés: amikor a táblázatban rákattintunk egy sorra, akkor annak az adatai bekerülnek az alsó szövegdobozokba.
+- - 4.2.2 Lecke: 01, Idegen nyelv: angol, Idegen szó: mother, Magyar: anya.
+- - 4.2.3 A tapasztalt viselkedés: az elvártaknak megfelelő.
+- 4.3 Az 'Új' gomb viselkedésének tesztelése.
+- - 4.3.1 Tesztadatok: Lecke: 01, Idegen nyelv: német, Idegen szó: die Mutter, Magyar: anya.
+- - 4.3.2 Az elvárt viselkedés: az alsó szövegdobozokból a beírt adatok eltűnnek.
+- - 4.3.3 A tapasztalt viselkedés az elvártaknak megfelelő.
+- 4.4 A 'Módosít' gomb viselkedésének tesztelése
+- - 4.4.1 Elvárt viselkedés: a táblázatban kijelölt sor adataiban történt változtatás elmentése az adatbázisban.
+- - 4.4.2 Tesztadatok: Lecke: 02, Idegen nyelv: angol, Idegen szó: mom, Magyar: anyuci->anyu.
+- - 4.4.3 Tapasztalt viselkedés: a módosítás megjelent a táblázatban, ebből következtethető, hogy az adatbázisban is megtörtént a változtatás.
