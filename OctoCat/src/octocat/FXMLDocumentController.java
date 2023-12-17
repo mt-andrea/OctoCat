@@ -7,7 +7,6 @@ package octocat;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -200,15 +199,15 @@ public class FXMLDocumentController implements Initializable {
     }
     
     private void beolvas(){
-        String szuro1 = "'%" + txtLeckeSzuro.getText() + "%'";
-        String szuro2 = "'%" + txtIdegenSzoSzuro.getText() + "%'";
-        String szuro3 = "'%" + txtMagyarSzuro.getText() + "%'";
-        String szuro4 = "'%" + txtIdegenNyelvSzuro.getText() + "%'";
-        String s = "SELECT * FROM szavak"
-                 + "WHERE lecke LIKE" + szuro1
-                 + "AND idegenszo LIKE" + szuro2
-                 + "AND magyar LIKE" + szuro3
-                 + "AND idegenNyelv LIKE" + szuro4
+        String szuro1 = "'%" + txtLeckeSzuro.getText() + "%' ";
+        String szuro2 = "'%" + txtIdegenSzoSzuro.getText() + "%' ";
+        String szuro3 = "'%" + txtMagyarSzuro.getText() + "%' ";
+        String szuro4 = "'%" + txtIdegenNyelvSzuro.getText() + "%' ";
+        String s = "SELECT * FROM szo "
+                 + "WHERE lecke LIKE " + szuro1
+                 + "AND idegenszo LIKE " + szuro2
+                 + "AND magyar LIKE " + szuro3
+                 + "AND idegenNyelv LIKE " + szuro4
                  + "ORDER BY idegenszo;";
         ab.beolvas(tblSzavak.getItems(), s );
         

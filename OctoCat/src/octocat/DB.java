@@ -26,7 +26,7 @@ public class DB {
     final String jelszo = "";
 
     public int torol(int szoId){
-        String sql = "DELETE FROM szavak WHERE szoID=?;";
+        String sql = "DELETE FROM szo WHERE szoID=?;";
         try (Connection kapcs = DriverManager.getConnection(url, felhasznalo, jelszo);
                 PreparedStatement ekp = kapcs.prepareStatement(sql)){
             ekp.setInt(1, szoId);
@@ -57,7 +57,7 @@ public class DB {
         }
     }
     public int hozzaad (String lecke, String IdegenSzo, String IdegenNyelv, String Magyar){
-        String s ="INSERT INTO szavak (lecke, IdegenNyelv, IgegenSzo, Magyar)"
+        String s ="INSERT INTO szo (lecke, IdegenNyelv, IdegenSzo, Magyar)"
                 + "VALUES (?, ?, ?, ?)";
         try (Connection kapcs = DriverManager.getConnection (url, felhasznalo, jelszo);
              PreparedStatement ekp = kapcs.prepareStatement (s)) {
@@ -74,8 +74,8 @@ public class DB {
     }
     
     public int modosit (int id, String lecke, String IdegenNyelv, String IdegenSzo, String Magyar) {
-        String s = "UPDATE szavak SET lecke= ?, IdegenNyelv=?, IdegenSzo=?, Magyar=? "
-                 + "WHERE szID=?";
+        String s = "UPDATE szo SET lecke= ?, IdegenNyelv=?, IdegenSzo=?, Magyar=? "
+                 + "WHERE szoID=?";
         try (Connection kapcs = DriverManager.getConnection (url, felhasznalo, jelszo);
                 PreparedStatement ekp = kapcs.prepareStatement (s)) {
             ekp.setString (1, lecke);
