@@ -1,0 +1,65 @@
+name: Assignee on Status Change
+
+on:
+  issues:
+    types:
+      - edited
+
+jobs:
+  assignee_on_status_change:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check if status has changed to 'Waiting for Code Review'
+      id: check_status
+      uses: actions/github-script@v5
+      with:
+        script: |
+          const payload = context.payload;
+          const oldStatus = payload.changes ? payload.changes.status.from : payload.issue.state;
+          const newStatus = payload.issue.state;
+          return { statusChanged: oldStatus !== newStatus, newStatus };
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Remove original Assignee and assign md-Andrea
+      if: steps.check_status.outputs.statusChanged && steps.check_status.outputs.newStatus == 'Waiting for Code Review'
+      run: |
+        # Get the issue number
+        const issueNumber = context.payload.issue.number;
+        
+        # Get current Assignees
+        const currentAssignees = await github.issues.listAssignees({
+          owner: context.repo.owner,
+          repo: context.repo.repo,
+          issue_number: issueNumber
+        });
+        
+        console.log(`Current Assignees: ${JSON.stringify(currentAssignees.data)}`);
+        
+        // Extract the first Assignee username (assuming there's at least one Assignee)
+        const originalAssignee = currentAssignees.data[0]?.login;
+        
+        if (originalAssignee) {
+          console.log(`Removing original Assignee: ${originalAssignee}`);
+          const removeAssigneeResponse = await github.issues.removeAssignees({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: issueNumber,
+            assignees: [originalAssignee]
+          });
+          
+          console.log(`Remove Assignee Response: ${JSON.stringify(removeAssigneeResponse.data)}`);
+          
+          console.log(`Assigning issue to md-Andrea`);
+          const assigneeResponse = await github.issues.addAssignees({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: issueNumber,
+            assignees: ["md-Andrea"]
+          });
+          
+          console.log(`Assignee Response: ${JSON.stringify(assigneeResponse.data)}`);
+        } else {
+          console.log("No Assignees found on the issue.");
+        }stringify(assigneeResponse.data)}`);

@@ -1,4 +1,4 @@
-/*Made by Andrea Mate, Katalin Andorfer, András Spengler, Bezdán Anita, Kalmár János
+/*Made by Andrea Mate, Katalin Andorfer, András Spengler, Bezdán Anita, Kalmár János, Tamás Nagy
 * For practice.
 This is the way! */
 
@@ -11,7 +11,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 /**
  *
- * @author $Mate Andrea, Andorfer Katalin, András Spengler, Bezdán Anita, Kalmár János
+ * @author $Mate Andrea, Andorfer Katalin, András Spengler, Bezdán Anita, Kalmár János, Tamás Nagy
  */
 public class OctoCat extends Application {
 
