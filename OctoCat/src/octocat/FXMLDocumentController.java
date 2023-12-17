@@ -55,7 +55,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TableView<Szo> tblSzavak;
     @FXML
-    private java.awt.TextField txtIdegenNyelv;
+    private TextField txtIdegenNyelv;
     @FXML
     private TextField txtIdegenNyelvSzuro;
     @FXML
@@ -77,26 +77,26 @@ public class FXMLDocumentController implements Initializable {
     void hozzaad() {
         String lecke = txtLecke.getText();
         if (lecke.length() < 1 || lecke.length() > 10) {
-            hiba ("Hiba!", "A lecke hossza 1-10 karakter lehet!");
+            Panel.hiba ("Hiba!", "A lecke hossza 1-10 karakter lehet!");
             txtLecke.requestFocus();
             return;
         }
         String IdegenNyelv = txtIdegenNyelv.getText();
         if (IdegenNyelv.length() < 1 || IdegenNyelv.length() > 10) {
-            hiba ("Hiba!", "Az IdegenNyelv hossza 1-10 karakter lehet!");
+            Panel.hiba ("Hiba!", "Az IdegenNyelv hossza 1-10 karakter lehet!");
             txtIdegenNyelv.requestFocus();
             return;
         }   
             
         String IdegenSzo = txtIdegenSzo.getText();
         if (IdegenSzo.length() < 1 || IdegenSzo.length() > 60) {
-            hiba ("Hiba!", "Az IdegenSzo hossza 1-60 karakter lehet!");
+            Panel.hiba ("Hiba!", "Az IdegenSzo hossza 1-60 karakter lehet!");
             txtIdegenSzo.requestFocus();
             return;
         }   
         String Magyar = txtMagyar.getText();  
          if (Magyar.length() < 1 || Magyar.length() > 60) {
-            hiba ("Hiba!", "A Magyar hossza 1-60 karakter lehet!");
+            Panel.hiba ("Hiba!", "A Magyar hossza 1-60 karakter lehet!");
             txtMagyar.requestFocus();
             return;
         }   
@@ -116,26 +116,26 @@ public class FXMLDocumentController implements Initializable {
 
         String lecke = txtLecke.getText ();
         if (lecke.length () < 1 || lecke.length () > 10) {
-            hiba ("Hiba!", "A lecke hossza 1-10 karakter lehet!");
+            Panel.hiba ("Hiba!", "A lecke hossza 1-10 karakter lehet!");
             txtLecke.requestFocus ();
             return;
         }
         String IdegenNyelv = txtIdegenNyelv.getText ();
-        if (IdegnNyelv.length () < 1 || IdegenNyelv.length () > 10) {
-            hiba ("Hiba!", "Az IdegenNyelv hossza 1-10 karakter lehet!");
+        if (IdegenNyelv.length () < 1 || IdegenNyelv.length () > 10) {
+            Panel.hiba ("Hiba!", "Az IdegenNyelv hossza 1-10 karakter lehet!");
             txtIdegenNyelv.requestFocus ();
             return;
         }
         String IdegenSzo = txtIdegenSzo.getText ();
-        if (IdegnNSzo.length () < 1 || IdegenSzo.length () > 60) {
-            hiba ("Hiba!", "Az IdegenSzó hossza 1-60 karakter lehet!");
+        if (IdegenSzo.length () < 1 || IdegenSzo.length () > 60) {
+            Panel.hiba ("Hiba!", "Az IdegenSzó hossza 1-60 karakter lehet!");
             txtIdegenSzo.requestFocus ();
             return;
         }
         
         String Magyar = txtMagyar.getText ();
-        if (lecke.Magyar () < 1 || Magyar.length () > 60) {
-            hiba ("Hiba!", "A Magyar hossza 1-10 karakter lehet!");
+        if (Magyar.length() < 1 || Magyar.length () > 60) {
+            Panel.hiba ("Hiba!", "A Magyar hossza 1-10 karakter lehet!");
             txtMagyar.requestFocus ();
             return;
         }
@@ -172,10 +172,10 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void torol() {
-        int index = tblSzavak.getSelectionModel().getSelectionIndex();
+        int index = tblSzavak.getSelectionModel().getSelectedIndex();
         if (index==-1)
             return;   
-        if (!igennem("Törlés","Biztosan törölni szeretné a kijelölt sort?"))
+        if (!Panel.igennem("Törlés","Biztosan törölni szeretné a kijelölt sort?"))
             return;
         int id = tblSzavak.getItems().get(index).getSzoID();
         int sor = db.torol(id);
@@ -195,7 +195,7 @@ public class FXMLDocumentController implements Initializable {
         txtIdegenSzo.clear();
         txtLecke.clear();
         txtMagyar.clear();
-        txtLecke.reguestFocus();
+        txtLecke.requestFocus();
         tblSzavak.getSelectionModel().select(null);
     }
     
@@ -228,12 +228,11 @@ public class FXMLDocumentController implements Initializable {
         oIdegenNyelv.setCellValueFactory(new PropertyValueFactory<>("idegenNyelv"));
         oMagyar.setCellValueFactory(new PropertyValueFactory<>("magyar"));
         oIdegenSzo.setCellValueFactory(new PropertyValueFactory<>("idegenSzo"));
-         txtIdegenNyelvSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
-        txtIdegenSzoSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
-        txtLeckeSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
-        txtMagyarSzuro.textProperty().addListener((ObservableValue Observable, String regiAdat, String uj_adat) -> beolvas());
-        tblSzavak.getSelectionModel().selectedIndexProperty().addListener(
-            (o,regi,uj) -> tablabol(uj.intValue())
+         txtIdegenNyelvSzuro.textProperty().addListener((o,regi,uj) -> beolvas());
+        txtIdegenSzoSzuro.textProperty().addListener((o,regi,uj) -> beolvas());
+        txtLeckeSzuro.textProperty().addListener((o,regi,uj) -> beolvas());
+        txtMagyarSzuro.textProperty().addListener((o,regi,uj) -> beolvas());
+        tblSzavak.getSelectionModel().selectedIndexProperty().addListener((o,regi,uj) -> tablabol(uj.intValue())
         );
     }    
     

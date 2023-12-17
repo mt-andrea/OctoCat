@@ -32,7 +32,7 @@ public class DB {
             ekp.setInt(1, szoId);
             return ekp.executeUpdate();
         } catch (SQLException e) {
-            Hiba("Törlés",e.getMessage());
+            Panel.hiba("Törlés",e.getMessage());
             return 0;
         }
     }
@@ -59,7 +59,7 @@ public class DB {
     public int hozzaad (String lecke, String IdegenSzo, String IdegenNyelv, String Magyar){
         String s ="INSERT INTO szavak (lecke, IdegenNyelv, IgegenSzo, Magyar)"
                 + "VALUES (?, ?, ?, ?)";
-        try (Connection kapcs = DriverManager.getConnection (db, user, pass);
+        try (Connection kapcs = DriverManager.getConnection (url, felhasznalo, jelszo);
              PreparedStatement ekp = kapcs.prepareStatement (s)) {
            ekp.setString (1, lecke);
            ekp.setString (2, IdegenNyelv);
@@ -68,15 +68,15 @@ public class DB {
            return ekp.executeUpdate();
         }
            catch (SQLException ex){
-             hiba ("Hozzáadás", ex.getMessage());
+             Panel.hiba ("Hozzáadás", ex.getMessage());
                return 0;
            }
     }
     
-    public int modosit (int id, String lecke, String IdegenNyelv, String IegenSzo, String Magyar) {
+    public int modosit (int id, String lecke, String IdegenNyelv, String IdegenSzo, String Magyar) {
         String s = "UPDATE szavak SET lecke= ?, IdegenNyelv=?, IdegenSzo=?, Magyar=? "
                  + "WHERE szID=?";
-        try (Connection kapcs = DriverManager.getConnection (db, user, pass);
+        try (Connection kapcs = DriverManager.getConnection (url, felhasznalo, jelszo);
                 PreparedStatement ekp = kapcs.prepareStatement (s)) {
             ekp.setString (1, lecke);
             ekp.setString (2, IdegenNyelv);
@@ -85,7 +85,7 @@ public class DB {
             ekp. setInt (5, id);
             return ekp.executeUpdate ();
         } catch (SQLException ex) {
-            hiba ("Modósítás", ex.getMessage());
+            Panel.hiba ("Modósítás", ex.getMessage());
             return 0;
         }
     }
