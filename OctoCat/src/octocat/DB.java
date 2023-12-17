@@ -24,6 +24,18 @@ public class DB {
     final String url = "jdbc:mysql://localhost:3306/szotar?useUnicode=true&characterEncoding=UTF-8";
     final String felhasznalo = "root";
     final String jelszo = "";
+
+    public int torol(int szoId){
+        String sql = "DELETE FROM szavak WHERE szoID=?;";
+        try (Connection kapcs = DriverManager.getConnection(url, felhasznalo, jelszo);
+                PreparedStatement ekp = kapcs.prepareStatement(sql)){
+            ekp.setInt(1, szoId);
+            return ekp.executeUpdate();
+        } catch (SQLException e) {
+            Hiba("Törlés",e.getMessage());
+            return 0;
+        }
+    }
     
     public void beolvas(ObservableList<Szo> tabla, String szoveg){
         try (Connection kapcsolat = DriverManager.getConnection(url,felhasznalo,jelszo);
