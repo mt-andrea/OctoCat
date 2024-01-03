@@ -29,3 +29,35 @@ Az Eszterházy Károly Katolikus Egyetem Bölcsészettudományi és Művészeti 
 - 3.2.5 Controll objektumok átmásolása a Controll osztályba
 - 3.2.6 Az adatbázisba való beszúrás hozzáadása
 - 3.2.7 Rekordok módosításának megoldása
+## 4. Tesztelés
+- 4.1 Szavak hozzáadásának tesztelése.
+- - 4.1.1 Elvárt viselkedés: az alsó szövegmezőkbe beírt adatoknak az eltárolása az adatbázisban a 'Hozzáad' gomb megnyomására.
+- - 4.1.2 Tesztadatok: Lecke: 01, Idegen nyelv: angol, Idegen szó: mother, Magyar: anya
+- - 4.1.3 Tapasztalt viselkedés: a szövegmezőkbe beírt adatok megjelentek a táblázatban. Ebből lehet következtetni, hogy az adatbázisba is bekerültek.
+- 4.2 A táblázatban történő kiválasztás tesztelése.
+- - 4.2.1 Elvárt viselkedés: amikor a táblázatban rákattintunk egy sorra, akkor annak az adatai bekerülnek az alsó szövegdobozokba.
+- - 4.2.2 Lecke: 01, Idegen nyelv: angol, Idegen szó: mother, Magyar: anya.
+- - 4.2.3 A tapasztalt viselkedés: az elvártaknak megfelelő.
+- 4.3 Az 'Új' gomb viselkedésének tesztelése.
+- - 4.3.1 Tesztadatok: Lecke: 01, Idegen nyelv: német, Idegen szó: die Mutter, Magyar: anya.
+- - 4.3.2 Az elvárt viselkedés: az alsó szövegdobozokból a beírt adatok eltűnnek.
+- - 4.3.3 A tapasztalt viselkedés az elvártaknak megfelelő.
+- 4.4 A 'Módosít' gomb viselkedésének tesztelése
+- - 4.4.1 Elvárt viselkedés: a táblázatban kijelölt sor adataiban történt változtatás elmentése az adatbázisban.
+- - 4.4.2 Tesztadatok: Lecke: 02, Idegen nyelv: angol, Idegen szó: mom, Magyar: anyuci->anyu.
+- - 4.4.3 Tapasztalt viselkedés: a módosítás megjelent a táblázatban, ebből következtethető, hogy az adatbázisban is megtörtént a változtatás.
+- 4.5 A 'Töröl' gomb viselkedésének tesztelése
+- - 4.5.1 Elvárt viselkedés: a táblázatban kijelölt sor adatai a 'Töröl' gomb megnyomására kitölödnek az adatbázisból.
+- - 4.5.2 Tesztadatok: Lecke :01, Idegen nyelv: angol, Ideden szó: Father Magy: Apa.
+- - 4.5.3 Tapasztalt viselkedés: a 'Töröl' gomb megnyomására kaptunk egy párbeszéd panelt, ami azt akarja tudni, hogy biztosan ki akarjuk-e törölni a rekordot, a 'Nem' gomb            megnyomására nem történt semmi. A 'Töröl' gomb ismételt megnyomására újra megkaptuk a párbeszéd panelt ebben az esetben az 'Igen'-t választjuk, az 'Igen' gomb                 megnyomására nem a várt viselkedést tapasztaltuk, vagyis nem történt semmi.
+- - 4.5.4 A hiba oka a törölt metodust tartalmazó osztály olyan változón keresztül volt hívatkozva, amelyben volt példányosítva maga az osztály ezért nullpointerexception               hibával tért vissza a program. 
+- - 4.5.5 Ismételt tesztelés a hiba javítása után, a 'Töröl' gomb és a párbeszéd panel 'Igen' gombjának megnyomása után, a táblázatban kijelölt sor eltűnt, így     
+          következtethető, hogy az adatbázisban is megtörtént a törlés.
+- 4.6 A szűrés tesztelése
+- - 4.6.1 Teszt adatok: ![image](https://github.com/mt-andrea/OctoCat/assets/150516987/519550af-5071-45e0-9141-49218231dbe3)
+- - 4.6.2 Elvárt viselkedés: a mező neveknek megfelelő szűrő mező kitöltése esetén a táblázatban kevesebb rekord jelenik meg.
+- - 4.6.3 Tapasztalt viselkedés: a Lecke és a Magyar mezők szűrése megfelelően működik, ellenben feltehetően az Idegen nyelv és az Idegen szó mezők funkcionalitása fel lett   
+          cserélve.
+- - 4.6.4 A hiba oka a beolvasás közben a tábla Idegen szó nevű mezője a szó osztály Igeden nyelv mezőjébe került eltárolásra és fordítva.
+- - 4.6.5 Ismételt tesztelés során a hiba javítása után, már minden szűrőmező az elvártaknak megfelelően működött.
+ 
