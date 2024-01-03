@@ -70,8 +70,6 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TextField txtMagyarSzuro;
 
-    private DB db;
-
     @FXML
     void hozzaad() {
         String lecke = txtLecke.getText();
@@ -108,7 +106,7 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void modosit() {
-        int index = tblSzavak.getSelectionModel () .getSelectedIndex ();
+        int index = tblSzavak.getSelectionModel().getSelectedIndex();
         if (index == -1)
             return;
         int id = tblSzavak.getItems (). get (index) .getSzoID ();
@@ -177,7 +175,7 @@ public class FXMLDocumentController implements Initializable {
         if (!Panel.igennem("Törlés","Biztosan törölni szeretné a kijelölt sort?"))
             return;
         int id = tblSzavak.getItems().get(index).getSzoID();
-        int sor = db.torol(id);
+        int sor = ab.torol(id);
         if (sor > 0) {
             beolvas();
         }

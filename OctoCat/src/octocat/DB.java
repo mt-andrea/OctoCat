@@ -47,8 +47,8 @@ public class DB {
                         new Szo(
                                 eredmeny.getInt("SzoID"),
                                 eredmeny.getString("Lecke"),
-                                eredmeny.getString("IdegenSzo"),
                                 eredmeny.getString("IdegenNyelv"),
+                                eredmeny.getString("IdegenSzo"),
                                 eredmeny.getString("Magyar")));
             }
         } catch (SQLException hiba) {
